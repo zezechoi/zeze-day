@@ -781,6 +781,10 @@ function renderNewsItems(){
   const items=newsData[currentNewsTab]||[];
   const color=NEWS_TABS_DATA[currentNewsTab].color;
   const bg=color+'22';
+  if(!items.length){
+    el.innerHTML='<div style="font-size:11px;color:var(--txt3);padding:10px 0;text-align:center;">이 카테고리는 잠시 후 다시 시도해주세요 🌿</div>';
+    return;
+  }
   items.forEach(item=>{
     const row=document.createElement('div');row.className='news-item';
     const tag=document.createElement('span');tag.className='ntag';tag.style.cssText='background:'+bg+';color:'+color+';';tag.textContent=item.tag||'';
@@ -799,40 +803,59 @@ function renderNewsItems(){
   });
 }
 
+const NEWS_QUERIES={
+  beauty:'K뷰티 OR 화장품 산업',
+  global:'K뷰티 해외 OR 글로벌 뷰티',
+  sns:   '인스타그램 마케팅 OR 틱톡 트렌드',
+  ai:    'AI 마케팅 OR 생성형 AI',
+};
+const NEWS_TAGS={beauty:'뷰티트렌드',global:'글로벌',sns:'SNS',ai:'AI'};
+
 async function fetchAllNews(){
   const loadEl=document.getElementById('news-load');
   const contentEl=document.getElementById('news-content');
-
   const cache=getNewsCache();
-  const allCached=Object.keys(NEWS_TABS_DATA).every(k=>cache[k]&&cache[k].date===TODAYKEY&&cache[k].data);
-  if(allCached){
+  const fresh=k=>cache[k]&&cache[k].date===TODAYKEY&&Array.isArray(cache[k].data)&&cache[k].data.length;
+
+  if(Object.keys(NEWS_TABS_DATA).every(fresh)){
     Object.keys(NEWS_TABS_DATA).forEach(k=>newsData[k]=cache[k].data);
     loadEl.style.display='none';renderNewsItems();return;
   }
 
   loadEl.style.display='block';contentEl.innerHTML='';
-  const prompt='오늘 날짜 기준 최신 뉴스를 웹 검색해서 아래 JSON 형식으로만 답해줘. 마크다운 없이 JSON만:\n{"beauty":[{"title":"제목","summary":"핵심 한 줄","tag":"국내뷰티/성분트렌드/마케팅/브랜드 중 하나","url":"URL"}],"global":[{"title":"제목","summary":"핵심 한 줄","tag":"K뷰티해외/글로벌브랜드/해외시장 중 하나","url":"URL"}],"sns":[{"title":"제목","summary":"핵심 한 줄","tag":"인스타그램/틱톡/숏폼/크리에이터 중 하나","url":"URL"}],"ai":[{"title":"제목","summary":"핵심 한 줄","tag":"생성AI/AI툴/마케팅AI/산업동향 중 하나","url":"URL"}]}\nbeauty 3개, global 3개, sns 3개, ai 3개. URL은 실제 기사 링크.';
 
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','anthropic-beta':'web-search-2025-03-05'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:2000,tools:[{type:'web_search_20250305',name:'web_search'}],messages:[{role:'user',content:prompt}]})
-    });
-    const data=await res.json();
-    if(data.error) throw new Error(data.error.message);
-    const content=data.content||[];
-    let raw='';
-    for(const b of content){if(b.type==='text'){raw=b.text;break;}}
-    if(!raw) throw new Error('응답 없음');
-    const s=raw.indexOf('{'), e=raw.lastIndexOf('}');
-    if(s===-1||e===-1) throw new Error('JSON 없음');
-    const parsed=JSON.parse(raw.slice(s,e+1));
-    Object.keys(NEWS_TABS_DATA).forEach(k=>{newsData[k]=parsed[k]||[];setNewsCache(k,newsData[k]);});
-    loadEl.style.display='none';renderNewsItems();
-  }catch(err){
-    loadEl.style.display='none';
-    contentEl.innerHTML='<div style="font-size:11px;color:var(--txt3);padding:8px 0;">⚠️ '+err.message+' · <span style="cursor:pointer;text-decoration:underline;" onclick="refreshAllNews()">다시 시도</span></div>';
+  let anyOk=false,lastErr=null;
+  for(const k of Object.keys(NEWS_QUERIES)){
+    if(fresh(k)){newsData[k]=cache[k].data;anyOk=true;continue;}
+    try{
+      const rssUrl='https://news.google.com/rss/search?q='+encodeURIComponent(NEWS_QUERIES[k])+'&hl=ko&gl=KR&ceid=KR:ko';
+      const apiUrl='https://api.rss2json.com/v1/api.json?count=5&rss_url='+encodeURIComponent(rssUrl);
+      const res=await fetch(apiUrl);
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const data=await res.json();
+      if(data.status!=='ok') throw new Error(data.message||'RSS 로딩 실패');
+      const items=(data.items||[]).slice(0,5).map(it=>{
+        const m=it.title.match(/^(.+?) - ([^-]+)$/);
+        const title=m?m[1].trim():it.title;
+        const source=m?m[2].trim():'';
+        const d=it.pubDate?new Date(it.pubDate):null;
+        const date=d&&!isNaN(d)?(d.getMonth()+1)+'/'+d.getDate():'';
+        const summary=[source,date].filter(Boolean).join(' · ');
+        return {title,summary,tag:NEWS_TAGS[k],url:it.link};
+      });
+      newsData[k]=items;
+      setNewsCache(k,items);
+      anyOk=true;
+    }catch(err){
+      newsData[k]=[];
+      lastErr=err;
+    }
+  }
+  loadEl.style.display='none';
+  if(!anyOk){
+    contentEl.innerHTML='<div style="font-size:11px;color:var(--txt3);padding:8px 0;">⚠️ 뉴스를 불러올 수 없어요'+(lastErr?' ('+lastErr.message+')':'')+' · <span style="cursor:pointer;text-decoration:underline;" onclick="refreshAllNews()">다시 시도</span></div>';
+  }else{
+    renderNewsItems();
   }
 }
 function refreshAllNews(){const c=getNewsCache();Object.keys(NEWS_TABS_DATA).forEach(k=>delete c[k]);localStorage.setItem(NEWS_KEY,JSON.stringify(c));fetchAllNews();}
