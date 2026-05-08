@@ -151,8 +151,10 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   .char-name{font-size:17px;}
   .char-lv{font-size:14px;}
 
-  /* 주간/월간 풀폭 (1024+의 720px 제한 해제) */
-  #sec-weekly,#sec-monthly{max-width:none;}
+  /* 주간/월간 좌측 정렬 (적당한 폭, 우측은 비움) */
+  #sec-weekly,#sec-monthly{max-width:780px;margin-left:0;margin-right:auto;}
+  /* 히트맵 셀이 너무 커지지 않게 캡핑 */
+  #sec-monthly .hm,#sec-monthly .hmlbls{max-width:560px;}
 }
 
 /* 초와이드 PC (1700px+): 2K/4K 모니터용 추가 스케일업 */
@@ -229,7 +231,8 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   /* 마무리 버튼 */
   .savebtn{padding:18px;font-size:17px;border-radius:16px;}
 
-  /* 주간/월간 통계 */
+  /* 주간/월간 통계 (좌측 정렬은 1280+ 에서 상속) */
+  #sec-weekly,#sec-monthly{max-width:880px;}
   .wsum{padding:18px;}
   .wsum-n{font-size:26px;}
   .wsum-l{font-size:13px;}
