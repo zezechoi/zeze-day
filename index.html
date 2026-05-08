@@ -17,27 +17,82 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   body{max-width:560px;margin:0 auto;box-shadow:0 0 32px rgba(0,0,0,.08);border-left:1px solid var(--bor);border-right:1px solid var(--bor);}
   .toast{left:50%;}
 }
-/* PC: 2컬럼 워크스테이션 레이아웃 */
+/* PC: 2컬럼 워크스테이션 레이아웃 + 전체 ~20% 스케일업 */
 @media (min-width:1024px){
   html{background:var(--bg2);}
-  body{max-width:1100px;margin:0 auto;box-shadow:0 0 32px rgba(0,0,0,.06);border-left:1px solid var(--bor);border-right:1px solid var(--bor);font-size:14px;}
+  body{max-width:1100px;margin:0 auto;box-shadow:0 0 32px rgba(0,0,0,.06);border-left:1px solid var(--bor);border-right:1px solid var(--bor);font-size:15px;}
   .toast{left:50%;}
-  /* Daily 섹션: 좌측 작업 / 우측 뉴스(sticky) */
-  #sec-daily{display:grid;grid-template-columns:1fr 380px;gap:14px;align-items:start;}
-  #sec-daily>*{grid-column:1;min-width:0;}
-  #sec-daily>.news-card{
+  /* Daily 섹션: 좌측 작업 / 우측 뉴스(sticky)
+     ⚠️ 반드시 .on 조건 필수 — id 우선순위가 .sec{display:none}보다 높아 탭 전환 깨짐 */
+  #sec-daily.on{display:grid;grid-template-columns:1fr 380px;gap:16px;align-items:start;}
+  #sec-daily.on>*{grid-column:1;min-width:0;}
+  #sec-daily.on>.news-card{
     grid-column:2;grid-row:1/span 99;
-    position:sticky;top:12px;align-self:start;
-    max-height:calc(100vh - 24px);overflow-y:auto;margin-bottom:0;
+    position:sticky;top:14px;align-self:start;
+    max-height:calc(100vh - 28px);overflow-y:auto;margin-bottom:0;
   }
-  /* Weekly/Monthly: 차트 가독성 위해 좁게 유지 */
   #sec-weekly,#sec-monthly{max-width:720px;margin:0 auto;}
-  /* PC 가독성: 폰트·여백 살짝 키움 */
-  .ttxt{font-size:14px;}
+
+  /* 페이지·헤더·탭 */
+  .pg{padding:16px;}
+  .hdr{padding:18px 22px;}
+  .hdr h1{font-size:20px;}
+  .tab{padding:13px 0;font-size:13px;}
+
+  /* 캐릭터 카드 */
+  .char{padding:18px;gap:16px;border-radius:20px;margin-bottom:12px;}
+  .char-name{font-size:16px;}
+  .char-lv{font-size:13px;}
+  .xplbl{font-size:11px;}
+  .wbtn{font-size:13px;padding:6px 14px;}
+
+  /* 카드 공통 */
+  .card{padding:14px 16px;border-radius:16px;margin-bottom:12px;}
   .clbl{font-size:12px;}
-  .mission-txt{font-size:14px;}
+  .stat{font-size:22px;}
+  .stat-s{font-size:12px;}
+
+  /* 미션 */
+  .mission{padding:14px 18px;border-radius:16px;margin-bottom:12px;}
+  .mission-lbl{font-size:11px;}
+  .mission-txt{font-size:15px;}
+  .mission-icon{font-size:26px;}
+
+  /* 뉴스 */
+  .ntab{padding:6px 13px;font-size:12px;}
+  .news-item{padding:10px 0;}
+  .ntag{font-size:10px;padding:3px 8px;}
   .ntitle{font-size:13px;}
   .nsub{font-size:11px;}
+
+  /* 할 일 */
+  .acch{padding:12px 14px;}
+  .acc-name{font-size:15px;}
+  .acc-cnt{font-size:13px;}
+  .acc-items{padding:4px 14px 9px 38px;}
+  .todo{padding:9px 0;}
+  .tcheck{width:20px;height:20px;}
+  .ttxt{font-size:15px;}
+
+  /* 카테고리 탭·입력 */
+  .ctab{padding:6px 12px;font-size:13px;}
+  .addinp{padding:11px 14px;font-size:15px;}
+  .addbtn{width:40px;height:40px;font-size:22px;}
+
+  /* 메모 & 일기 */
+  .cn-inp{font-size:14px;}
+  .jarea{font-size:15px;}
+
+  /* 마무리 버튼 */
+  .savebtn{padding:14px;font-size:15px;border-radius:14px;}
+
+  /* 주간/월간 통계 */
+  .wsum{padding:14px;}
+  .wsum-n{font-size:22px;}
+  .wsum-l{font-size:12px;}
+  .mcat{padding:14px;}
+  .mcat-n{font-size:22px;}
+  .mcat-l{font-size:13px;}
 }
 .hdr{background:var(--sur);border-bottom:1px solid var(--bor);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
 .hdr h1{font-size:17px;font-weight:700;}
