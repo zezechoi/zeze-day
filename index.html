@@ -9,7 +9,14 @@
 :root{--bg:#F5F2EC;--bg2:#EDE8DF;--sur:#FDFAF5;--bor:#E2DAD0;--txt:#3A332C;--txt2:#8A7D72;--txt3:#B8ADA4;--card:#FDFAF5;}
 [data-theme=dark]{--bg:#1A1814;--bg2:#242018;--sur:#2A2520;--bor:#3A3428;--txt:#EDE8DF;--txt2:#B8ADA4;--txt3:#7A7068;--card:#242018;}
 *{margin:0;padding:0;box-sizing:border-box;}
+html{background:var(--bg);min-height:100vh;}
 body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;padding-bottom:60px;}
+/* PC 가시성: 모바일 폰 화면처럼 중앙 정렬 */
+@media (min-width:600px){
+  html{background:var(--bg2);}
+  body{max-width:460px;margin:0 auto;box-shadow:0 0 32px rgba(0,0,0,.08);border-left:1px solid var(--bor);border-right:1px solid var(--bor);}
+  .toast{left:50%;}
+}
 .hdr{background:var(--sur);border-bottom:1px solid var(--bor);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
 .hdr h1{font-size:17px;font-weight:700;}
 .hdr-r{display:flex;gap:6px;align-items:center;}
@@ -555,7 +562,15 @@ function checkAllDone() {
 }
 
 // STREAK
-function calcStreak(){let s=0;const d=new Date();while(true){const k=d.toISOString().slice(0,10);if(DB[k]&&DB[k].done){s++;d.setDate(d.getDate()-1);}else break;}return Math.max(s,1);}
+function calcStreak(){
+  // 앱을 연 날(DB[key] 존재) = 1일로 카운트. "오늘 마무리" 버튼 안 눌러도 OK.
+  let s=0;const d=new Date();
+  while(true){
+    const k=d.toISOString().slice(0,10);
+    if(DB[k]){s++;d.setDate(d.getDate()-1);}else break;
+  }
+  return Math.max(s,1);
+}
 function checkMilestone(s){const m={7:'🔥 7일 연속!',14:'🌟 2주 연속!',30:'👑 30일 연속!'};if(m[s])setTimeout(()=>{burst(window.innerWidth/2,200,12);toast(m[s]);},700);}
 
 // BEAUTY
