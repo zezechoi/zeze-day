@@ -95,16 +95,17 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   .mcat-l{font-size:13px;}
 }
 
-/* 와이드 PC (1280px+): 3컬럼 레이아웃 — 화면을 넓게 활용 */
+/* 와이드 PC (1280px+): 3컬럼 레이아웃 — 풀와이드, 화면 가득 */
 @media (min-width:1280px){
-  body{max-width:1500px;}
-  .pg{padding:20px;}
+  html{background:var(--bg);}
+  body{max-width:none;margin:0;font-size:16px;border-left:none;border-right:none;box-shadow:none;}
+  .pg{padding:24px 32px;}
 
   /* 3컬럼 그리드: 작업1 | 작업2 | 뉴스(sticky) */
   #sec-daily.on{
     display:grid;
-    grid-template-columns:1fr 1fr 400px;
-    gap:20px;
+    grid-template-columns:1fr 1fr 440px;
+    gap:24px;
     align-items:start;
   }
   /* 기본: 모든 자식 col1 */
@@ -113,8 +114,8 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   /* 우측 뉴스 (전체 높이 sticky) */
   #sec-daily.on>.news-card{
     grid-column:3;grid-row:1/span 99;
-    position:sticky;top:16px;align-self:start;
-    max-height:calc(100vh - 32px);overflow-y:auto;margin-bottom:0;
+    position:sticky;top:18px;align-self:start;
+    max-height:calc(100vh - 36px);overflow-y:auto;margin-bottom:0;
   }
 
   /* 상단: 캐릭터(좌) | 통계(우) 나란히 */
@@ -135,16 +136,108 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   #sec-daily.on>.set-sec{grid-column:1/3;grid-row:6;}
 
   /* 시원한 패딩·여백 */
-  .card{padding:18px 20px;border-radius:18px;}
-  .char{padding:22px;gap:18px;border-radius:22px;}
-  .mission{padding:16px 22px;border-radius:18px;}
-  .savebtn{padding:16px;font-size:16px;}
+  .card{padding:20px 22px;border-radius:18px;}
+  .char{padding:24px;gap:20px;border-radius:22px;}
+  .mission{padding:18px 24px;border-radius:18px;}
+  .savebtn{padding:17px;font-size:16px;}
+
+  /* 헤더 */
+  .hdr{padding:20px 26px;}
+  .hdr h1{font-size:22px;}
+  .tab{padding:14px 0;font-size:14px;}
 
   /* 캐릭터 SVG 살짝 키움 */
-  .char svg{width:96px;height:96px;}
+  .char svg{width:104px;height:104px;}
+  .char-name{font-size:17px;}
+  .char-lv{font-size:14px;}
 
   /* 주간/월간은 살짝 더 넓게 */
-  #sec-weekly,#sec-monthly{max-width:840px;}
+  #sec-weekly,#sec-monthly{max-width:880px;}
+}
+
+/* 초와이드 PC (1700px+): 2K/4K 모니터용 추가 스케일업 */
+@media (min-width:1700px){
+  body{font-size:17px;}
+  .pg{padding:32px 48px;}
+
+  #sec-daily.on{
+    grid-template-columns:1fr 1fr 500px;
+    gap:30px;
+  }
+  #sec-daily.on>.news-card{top:22px;max-height:calc(100vh - 44px);}
+
+  /* 헤더 */
+  .hdr{padding:24px 32px;}
+  .hdr h1{font-size:24px;}
+  .streak{font-size:13px;padding:6px 12px;}
+  .hbtn{width:36px;height:36px;font-size:16px;}
+  .tab{padding:16px 0;font-size:15px;}
+
+  /* 캐릭터 카드 */
+  .char{padding:28px;gap:24px;border-radius:26px;margin-bottom:0;}
+  .char svg{width:120px;height:120px;}
+  .char-stage{font-size:12px;margin-bottom:4px;}
+  .char-name{font-size:20px;margin-bottom:3px;}
+  .char-lv{font-size:15px;margin-bottom:10px;}
+  .xpbar{height:7px;margin-bottom:5px;}
+  .xplbl{font-size:13px;margin-bottom:10px;}
+  .wbtn{font-size:14px;padding:8px 18px;}
+
+  /* 카드 공통 */
+  .card{padding:22px 26px;border-radius:20px;}
+  .clbl{font-size:13px;margin-bottom:9px;}
+  .stat{font-size:28px;}
+  .stat-s{font-size:14px;margin-top:4px;}
+  .pbar{height:6px;margin-top:9px;}
+
+  /* 미션 */
+  .mission{padding:22px 28px;border-radius:20px;gap:14px;}
+  .mission-lbl{font-size:12px;margin-bottom:5px;}
+  .mission-txt{font-size:17px;}
+  .mission-icon{font-size:32px;}
+
+  /* 뉴스 */
+  .ntab{padding:8px 16px;font-size:13px;}
+  .news-item{padding:13px 0;}
+  .ntag{font-size:11px;padding:4px 10px;margin-bottom:5px;}
+  .ntitle{font-size:14px;line-height:1.5;}
+  .nsub{font-size:12px;margin-top:4px;}
+  .nrefresh{font-size:12px;padding:4px 10px;}
+
+  /* 할 일 아코디언 */
+  .acch{padding:16px 20px;gap:10px;}
+  .acc-name{font-size:17px;}
+  .acc-cnt{font-size:15px;}
+  .minibar{width:36px;height:4px;}
+  .acc-items{padding:6px 20px 13px 48px;}
+  .todo{padding:12px 0;gap:11px;}
+  .tcheck{width:22px;height:22px;border-radius:6px;}
+  .ttxt{font-size:16px;}
+
+  /* 카테고리 탭·입력 */
+  .ctab{padding:8px 14px;font-size:13px;}
+  .addrow{gap:10px;margin-top:12px;}
+  .addinp{padding:13px 16px;font-size:16px;border-radius:12px;}
+  .addbtn{width:46px;height:46px;font-size:24px;border-radius:12px;}
+
+  /* 메모 & 일기 */
+  .cn-row{padding:10px 0;gap:10px;}
+  .cn-badge{font-size:11px;padding:3px 9px;}
+  .cn-inp{font-size:15px;}
+  .jarea{font-size:16px;min-height:70px;}
+
+  /* 마무리 버튼 */
+  .savebtn{padding:18px;font-size:17px;border-radius:16px;}
+
+  /* 주간/월간 통계 */
+  #sec-weekly,#sec-monthly{max-width:1000px;}
+  .wsum{padding:18px;}
+  .wsum-n{font-size:26px;}
+  .wsum-l{font-size:13px;}
+  .wbars{height:64px;margin-top:10px;}
+  .mcat{padding:18px;}
+  .mcat-n{font-size:26px;}
+  .mcat-l{font-size:14px;}
 }
 .hdr{background:var(--sur);border-bottom:1px solid var(--bor);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
 .hdr h1{font-size:17px;font-weight:700;}
