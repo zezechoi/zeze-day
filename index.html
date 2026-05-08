@@ -151,8 +151,8 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   .char-name{font-size:17px;}
   .char-lv{font-size:14px;}
 
-  /* 주간/월간은 살짝 더 넓게 */
-  #sec-weekly,#sec-monthly{max-width:880px;}
+  /* 주간/월간 풀폭 (1024+의 720px 제한 해제) */
+  #sec-weekly,#sec-monthly{max-width:none;}
 }
 
 /* 초와이드 PC (1700px+): 2K/4K 모니터용 추가 스케일업 */
@@ -230,7 +230,6 @@ body{font-family:'Pretendard',-apple-system,sans-serif;background:var(--bg);colo
   .savebtn{padding:18px;font-size:17px;border-radius:16px;}
 
   /* 주간/월간 통계 */
-  #sec-weekly,#sec-monthly{max-width:1000px;}
   .wsum{padding:18px;}
   .wsum-n{font-size:26px;}
   .wsum-l{font-size:13px;}
