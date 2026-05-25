@@ -1,12 +1,6 @@
 {
-  "updated": "2026-05-24T08:06:57.870Z",
+  "updated": "2026-05-25T12:13:27.009Z",
   "beauty": [
-    {
-      "title": "미국 화장품업계 260만 고용‧1인 평균연봉 5.4만달러",
-      "summary": "약업신문 · 5/23",
-      "tag": "뷰티트렌드",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBzbFViVnpadUpETGxVWFRIQ3VsRXFDUFdMYnRfalVhRktXejMyNnVUZF9BMnlVOWNwTFhBaFFUOVJMendqMVJvQlg1WGo4MXN0b1kwLTV5Wjl4cXJ4WlNUSWJ3S2NFdw?oc=5"
-    },
     {
       "title": "화장품산업, 빅2와 인디 브랜드 간 서바이벌 전국시대 돌입",
       "summary": "cncnews.co.kr · 5/23",
@@ -14,62 +8,68 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE81R1FWRmRvSzFheDNReTFkMjM5X1phckpuY0FaaGJma1RrOFdXcldPOUg5TGhxWFlaSVVqZHU2bF9nQ0MycVhiZWpzc1p2T1lWazJIT01pNUEzQlhPdEN4UA?oc=5"
     },
     {
-      "title": "\"AI·헬스케어·K-뷰티로 세계 홀렸다\"... 한국 참가단, 말레이시아 국제발명전시회 역대 최고 성과",
-      "summary": "특허뉴스 · 5/24",
+      "title": "농진청, 국산 감귤로 피부장벽 화장품 개발…식약처 인증",
+      "summary": "푸드투데이 · 5/25",
       "tag": "뷰티트렌드",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1aeGZiNEFFOV9mOHJyUnMyS3NWLVBoYmFVM09kUTM0ZmFGTldjbkM1bG0wc2pCeXZwNmpnS0JuSEpHd3hibFB0RQ?oc=5"
-    },
-    {
-      "title": "현대경제硏 “수출 1조달러 가려면 K-뷰티·K-푸드 키워야”",
-      "summary": "서울경제TV · 5/24",
-      "tag": "뷰티트렌드",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9wTFlvQm1lbXBZTWhMNjU3RVV2ZGdqdENCSmtPQVhTT0FUbHJUb19vZmJ3cFZ1cGk5c0dPZEZMcVJRSWNLWTlLRGlTUEQ3TTBfRTJsRWtHZElHc0xleXdSM05EclY?oc=5"
-    },
-    {
-      "title": "2026년 1분기 화장품기업 84사 경영실적 지표",
-      "summary": "코스모닝 · 5/23",
-      "tag": "뷰티트렌드",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSEVXM19nTkprZEdpUmNCVTBQODN5bFl5clhEZ1h3em1WV3JrS2haRy1NeEF0ekNLRkNrUDd1Mk9ockFhTDFrQ0kxYnZQelU0bm9LYi00Z0VMMk45MXhBMHAxb21lSGc5QkpsY1lRQUdBdVZ5TjQ1QVlKTlJPUlh1SFpFZkVsQQ?oc=5"
-    }
-  ],
-  "global": [
-    {
-      "title": "[트렌드+] 잘 나가는 K뷰티, 유통가 新성장동력 됐다",
-      "summary": "신아일보 · 5/24",
-      "tag": "글로벌",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAzMm1HdmczVnBmcTFzLTE4RDJ2ODhlWC1PZnk4STdzbFBOUnpTOGRFd3p6QTZ2LV9UWU1xRUtMRFpYSnBxbkZIOWZPUjVNTVFOT2pFSnhFcEVNMndsanl2NWNhTFppNHh4eV8yNzctZlE?oc=5"
-    },
-    {
-      "title": "현대경제硏 “수출 1조달러 가려면 K-뷰티·K-푸드 키워야”",
-      "summary": "서울경제TV · 5/24",
-      "tag": "글로벌",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9wTFlvQm1lbXBZTWhMNjU3RVV2ZGdqdENCSmtPQVhTT0FUbHJUb19vZmJ3cFZ1cGk5c0dPZEZMcVJRSWNLWTlLRGlTUEQ3TTBfRTJsRWtHZElHc0xleXdSM05EclY?oc=5"
-    },
-    {
-      "title": "반도체만으론 부족…\"K뷰티·K푸드 키워 수출 1조달러 가야\"",
-      "summary": "아시아경제 · 5/24",
-      "tag": "글로벌",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5yMmtaUUdWa1VaOXdLMVFjeUlJR0tScExQLTVKSnRDQTh2eGpOZG5EU3NaY2NvNWpBa1lOVkNySHZTaGlUZzQ2NUZ2eTMzT3VjX1lXQWM4UERtU3NzdnRrUw?oc=5"
-    },
-    {
-      "title": "현대경제연구원 “수출 1조달러 위해 K-뷰티·K-푸드 경쟁력 키워야”",
-      "summary": "브릿지경제 · 5/24",
-      "tag": "글로벌",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5rVFR2U3BmZmZPX2pHWVo1bVFhUWVxNG9tR0d0V2dkZXUzSFI5OF9OYnIzM3YtVS12VUpidlZHRTBUNDZ1RmhORy0xX3hmOFMxLVNzOVo2UHloQQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE02eW1oZ20xcHNWNEEzbVhycFk2eDVHS3hCTzEyTVZwLUZScTBoMEF5QkZpMExjdUNoV0l1RWlONE1aZjYwSEdwLVc4WEk1Qm5lNkR0NkZXUm5yOHlXcmhXQzd6WGhjUQ?oc=5"
     },
     {
       "title": "‘K-뷰티’, 현지 문화·규제 이해 없인 역풍 맞는다",
       "summary": "헬스경향 · 5/22",
-      "tag": "글로벌",
+      "tag": "뷰티트렌드",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5PTl9YS0k3Nko0VDdjM0FBVERWV2V3TENOUnVIeXhkdXdQZjRReUVGeFY1NWYySS15YmlSRjBZYUY5Ym9hdXpnNzBXaTJ6ZVpRQU1GQkFURkFnOHJOUjNXWF9qbnBOLTBCWmc?oc=5"
+    },
+    {
+      "title": "'세계 2위' 도약한 K-뷰티…‘인디·다각화·기능성’ 앞세워 5월 수출도 질주",
+      "summary": "코스인코리아닷컴 · 5/23",
+      "tag": "뷰티트렌드",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4xZ0dab2tMdFNfenBJbDhxSjBTd1dEc3hCdUZ5UnBpTlNtT3ZVTnVNUUdEQ2dtYUNXbmZnNmhnWmNZdEdlTDk0YlNBdjYzN0Nfb1BrUkl1RThMOWVwcy0wSGNiYw?oc=5"
+    },
+    {
+      "title": "올리브영, 美 본토 상륙···K뷰티 '수출'서 '유통 주도권' 경쟁으로",
+      "summary": "뉴스웨이 · 5/24",
+      "tag": "뷰티트렌드",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE00cEs5NElwRUhUeE54SGVZS19JYkdGUEVNSHhGQzM1Y1pXam5NZDhvTzFSS3VZV3NjN0ZkY1hTMHllazRrdFJnQzB0aGNpbDlIcGtqVGkxTWh6Zmx4UmR3NzY4dUFyOFVKRVE?oc=5"
+    }
+  ],
+  "global": [
+    {
+      "title": "브라질 최대 도심 축제서 K-뷰티 알렸다... 30개 중기 브랜드 참가 - 한국무역협회-KITA.NET",
+      "summary": "5/25",
+      "tag": "글로벌",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONVhaZWNJYm5IZEJkS3JxNENFZzUyaE1iWVFFaGlLWnBmcEZYZ3ZacktpUk1CMXY5RmtEOHM5M3NwYXNfcmF5cU4zc2pzREdwMzdsTlJRYnZMMEVxMnVnQ0V2RGZHenFEX3pnMjhYMGpQRTNSeVRXMmZzOWxYRVZVVC1UR1pJeENyNlhyTmc5c3UwdHVoQmtuN0VORzJFVUlCT2laRmhORTNHVmV0TUpDazdMaklxTHBidWFfb3pjYUQyYTNZbEVzZXZqQ3ZONGM0R1VxZzNB?oc=5"
+    },
+    {
+      "title": "아모레퍼시픽 “K-뷰티, 글로벌 스킨케어의 새로운 기준”",
+      "summary": "에너지경제신문 · 5/25",
+      "tag": "글로벌",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ucS1iYUptSVo4MUNPT1R2WGRwT29NUWJsM1hodm0yQUMwZnBoUzhZb0NLSW1jMHJiYi1GaEE1dmg5QUxXbC1jMkdwVWVjcGJfQzFMelBqUVlwbms?oc=5"
+    },
+    {
+      "title": "수출 6배 급증 브라질 시장 겨냥…무협, 'K-뷰티 팝업' 개최",
+      "summary": "뉴스1 · 5/25",
+      "tag": "글로벌",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5zR2hwRi01NG4yTjlmYWcxSl9xMWZ5dVVJWi1SeVRoSnliVUFIcTFsWi1IaXVjdTVacEowYnJMaGU0R2JrZmF0TER1LURkMDZlSjVzYTQwU2R2UjJjV05CaE1XWVI?oc=5"
+    },
+    {
+      "title": "올리브영, 美 본토 상륙…K뷰티 '수출'서 '유통 주도권' 경쟁으로",
+      "summary": "v.daum.net · 5/24",
+      "tag": "글로벌",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBpQjVkbGpNWWJVcktjTE41UC10cUdEOUk4UnNENllEdzY4SkFnaklTQ1RNTjJwQTRvcVVNZ1FCU0VFN0g0S21qM29od0dRREk?oc=5"
+    },
+    {
+      "title": "킨텍스·코트라, ‘K-뷰티 더우인 핀포인트 상담회’ 성료",
+      "summary": "문화일보 · 5/25",
+      "tag": "글로벌",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE43QXp0SjVOdUJ4VnRaUDJIX2xwQ1M5VWlkN3pQZTNvOGg3MEhnLWs3SHVfWktJbnJUOWNQcS1ERHNrNVNZTmFJUWFZRUJ6Z004?oc=5"
     }
   ],
   "sns": [
     {
-      "title": "2026년 디지털 트렌드 변화에 따른 소비자 이용행태",
-      "summary": "브런치 · 5/21",
+      "title": "\"이게 '천연 위고비' 레시피\"…SNS 뒤흔든 '홈메이드 건기식' [트렌드+]",
+      "summary": "한국경제 · 5/24",
       "tag": "SNS",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBBSlNXWnpVUDJqbWtDU3QtZFlzV0UzT0ZiVUREZEdDVGdhTzI4Q3otNDU3UWV2RkNNa2lvQ1BCTWdua0E3V29qNmE5Vk9vckhaeXc?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YdUlONzRZVW5CSS1fTDNtUm51cFlHZGxhdUNrRXJDbm1ibVZDRWZyMkRrcl9JZ2JOcEZQOTNITjBTU2duclF0Y091OEJyUmRfc3RkZzRMb29iUdIBVEFVX3lxTE1neHlvV0tpSjlrRTZ4RFk0WjV1MWtRbWZnY2ctLTdmd044ZENrUG1hUUltcktsd3RuZ0pjTUpaMUNhdXBFalg1U29jMnZxVGY2VUtFYQ?oc=5"
     },
     {
       "title": "2026년 1분기 인스타그램 트렌드(feat.소셜비즈)",
@@ -98,34 +98,34 @@
   ],
   "ai": [
     {
-      "title": "금융사, 내부망서 생성형 AI 쓴다…'미토스' 보안 위협에 망분리 전격 완화",
-      "summary": "v.daum.net · 5/24",
+      "title": "대구 남구, 생성형 AI 활용 ‘홍보 영상 공모’",
+      "summary": "hidomin.com · 5/25",
       "tag": "AI",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1mVzA1cnM0RlpzQU4yZlNKcUU0UTFESkJlMFB2YW9NYjBYZmhpZXJJU2k3UjNWV3VlYTBHcloyUWlVUnhmV3RBclA5Z00zSHc?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1OTnJBdVAxRnZ5MmxWRy1UVk5sYW8xVXh6Z0gtS1JvVEROa3lFR1pvNUJvT1BGSUZ2VkJXUHFyX1Z2T2NEWHgtNE5DSlllY2F3Z1ZQbDVlcGxPRW84NFh3RUpjNkZxeGVaTXc?oc=5"
     },
     {
-      "title": "\"AI가 바꾸는 브랜드 발견 방식\"펜타클, AI 마케팅 플랫폼 적용 본격화",
-      "summary": "매드타임스 · 5/22",
+      "title": "“AI는 마케팅의 핵심 변수”…한국마케팅학회 산학 전문가들 한자리에",
+      "summary": "디지털데일리 · 5/25",
       "tag": "AI",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95cW9HaFhEYXh6UzZ1MHl2WkhqaFdtV243R3VMM0VScUN3OWdMVmpYWjZCM2VRS0VYdU9CVEViX21fNzZxWUJTOE1GaXZvY214ekF4dXV2SmRlNV9JMEdaYU1GOUJZMHQyWUFlZQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBJQ2FJRVB4WkxPV1lQak05aENiOVdBQVVnY0JPOW1XX3NUQ1hIN0hxZXhaU2p4SnN0QTg4TUJrSVkya0FTSTduTnZsamJhMHZ5SERET28zc0VkVEhwaXFrM0UydE0?oc=5"
     },
     {
-      "title": "[새로 나온 책]AI가 기억하는 브랜드",
-      "summary": "전자신문 · 5/23",
+      "title": "대구한의대, 생성형 AI 창업인재 키운다…실전형 캠프 성료",
+      "summary": "kyongbuk.co.kr · 5/25",
       "tag": "AI",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFAtTjBpQnlrV1hNRHFXdUNzLUNMLVozZHhKQWR6XzdrVTk1NWRPWU04NzJPMXVpVWxETXBRUlNrclg2eTR2aDlidVVibm1rQQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE83MGIxcFNjVTR6LWFqSWl3cnpmdmhrWUdBMkpyVG1SenlIbFFPQU90R0doQ25aa0YzcXV4dVh4azQ3bnYwYndWMC1Mb0t5ODRVT3c0ZEFNMzFWTGZxRjZoUkltbmtNNVlqbmExY19aVQ?oc=5"
     },
     {
-      "title": "펜타클, AI 마케팅 플랫폼 본격 적용",
-      "summary": "디지털 인사이트 DIGITAL iNSIGHT · 5/22",
+      "title": "“AI가 스스로 학습하고 최적화한다”… 마케팅 조직 바꾸는 ‘셀프-임프루빙 AI’",
+      "summary": "매드타임스 · 5/24",
       "tag": "AI",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNcW9kNFhkYWcwWnFOeDFDaXowV3ZRZTdST1RHRVVKUjVDUWExc1Zlb1RLWHVtYW84WUhJSktJNGpDZldWOTVkcXhsTGJRejRLNEw2bnhBUklFeXQxclZzZUxjT2VCdWE4NVRHdHN1SVR6Z3ZycTJIUmZwbE5SX3U0WnFlM05oS1Vsc05ObzlJeS0wX05PZkRuQ2RqbFlJUkVMcEk0RE9VNklHdWs2Nml4MWdKSUQ2SWVmRWE1cXBFN2xMaUMyT0FvcURZS2J5Sm1yUWJkc3diLUFxcjIwbGVLT0o1c2VzTUhUelE?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9XMlliakJGQm5aelRMdE81REx2UE5xLW5pYVpzazNVWGZsbnFRNUU1WmNZMDM1eVJua2stMTJ1blFodWE5NjJqV09JQ3RxTDN3LWx5ZG1CdmViUkQ0MkNEOHVWVC13c2plOHV6Xw?oc=5"
     },
     {
-      "title": "경기대, ‘생성형 AI 활용 업무혁신 ㆍ컨설팅 고도화 전략’ 교육 성료",
-      "summary": "글로벌뉴스통신GNA · 5/24",
+      "title": "🤖 사람 대신 일하는 로봇? 생성형 AI 다음을 노리는 피규어 AI",
+      "summary": "뉴닉 · 5/25",
       "tag": "AI",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5FTloxVExhVWtKZDBUZDhBakpRVWVTQUdHbklDaC1BcElrVmFoZU5zS1l2eDVjU2VCOG9lQ3VmeE5wc0JnRlJxWm1UakplTHZRWjlUMG5yaDhMaHJXbnVCQmcwdzJ5dFF2ZGt0MldUczgwOWRM?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA1Tl9Yd1R3Q1VWaVliOFhncFNpMkFad0N3LUJqc0syZzZqODU1eUlPenBhTVZ2dzlKSUZHR28xMF9qYjhRUXQ1cWRSZnJzOE10d25CYQ?oc=5"
     }
   ]
 }
